@@ -3,12 +3,12 @@ curl -L -X POST 'http://<DESTINATION_ES_IP:PORT>/_reindex?pretty' -H 'Content-Ty
     "remote": {
       "host": "http://<SOURCE_ES_IP:PORT>"
     },
-    "index": "customer_profile_sit",
+    "index": "<SOURCE_INDEX_NAME>",
     "query": {
       "match_all" : {}
     }
   },
   "dest": {
-    "index": "customer_profile_sit"
+    "index": "<DESTINATION_INDEX_NAME>"
   }
 }'
